@@ -4,7 +4,7 @@
  */
 "use strict";
 var assert = require("power-assert");
-var MockLocalStorage = require("../lib/mock-localstorage");
+var MockLocalStorage = require("../");
 // getItem
 describe("getItem", function () {
     var localStorage;
