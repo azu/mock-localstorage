@@ -1,0 +1,28 @@
+{
+  "name": "mock-localstorage",
+  "description": "mock localStorage library",
+  "version": "0.0.1",
+  "homepage": "https://github.com/azu/mock-localstorage/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/azu/mock-localstorage.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/*.js"
+  },
+  "directories": {
+    "test": "test/"
+  },
+  "author": "azu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/azu/mock-localstorage/issues"
+  },
+  "devDependencies": {
+    "espower-loader": "^0.7.1",
+    "intelli-espower-loader": "^0.2.0",
+    "mocha": "^1.21.4",
+    "power-assert": "^0.7.2"
+  }
+}
