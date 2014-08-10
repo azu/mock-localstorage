@@ -1,4 +1,4 @@
-# mock-localstorage
+# mock-localstorage [![Build Status](https://travis-ci.org/azu/mock-localstorage.svg)](https://travis-ci.org/azu/mock-localstorage)
 
 Mock object of `localStorage`.
 
