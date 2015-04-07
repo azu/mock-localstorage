@@ -16,9 +16,10 @@ describe("getItem", function () {
         localStorage.setItem("undefined", "foo");
         localStorage.setItem("null", "bar");
         localStorage.setItem("", "baz");
+        localStorage.setItem("a:b", "qux");
     });
     it("1", function () {
-        assert.equal(localStorage.length, 3);
+        assert.equal(localStorage.length, 4);
     }, "All 3 items should be added.");
     it("2", function () {
         assert.equal(localStorage["unknown"], undefined, "localStorage['unknown']")
@@ -34,5 +35,6 @@ describe("getItem", function () {
         assert.equal(localStorage.getItem(undefined), "foo", "localStorage.getItem(undefined)")
         assert.equal(localStorage.getItem(null), "bar", "localStorage.getItem(null)")
         assert.equal(localStorage.getItem(""), "baz", "localStorage.getItem('')")
+        assert.equal(localStorage.getItem("a:b"), "qux", "localStorage.getItem('a:b')")
     }, "getItem should be correct")
 });
