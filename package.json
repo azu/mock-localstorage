@@ -1,7 +1,7 @@
 {
   "name": "mock-localstorage",
   "description": "mock localStorage library",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "homepage": "https://github.com/azu/mock-localstorage/",
   "repository": {
     "type": "git",
