@@ -17,6 +17,6 @@ describe("removeItem", function () {
         assert.equal(localStorage.getItem("name"), "user1");
         localStorage.removeItem("name");
         localStorage.removeItem("unknown");
-        assert.equal(localStorage.getItem("name"), null, "localStorage.getItem('name')")
+        assert.strictEqual(localStorage.getItem("name"), null, "localStorage.getItem('name')")
     });
 });

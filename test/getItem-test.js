@@ -22,7 +22,8 @@ describe("getItem", function () {
         assert.equal(localStorage.length, 4);
     }, "All 3 items should be added.");
     it("2", function () {
-        assert.equal(localStorage["unknown"], undefined, "localStorage['unknown']")
+        // Array style access should return undefined if not found, the same as real localstorage.
+        assert.strictEqual(localStorage["unknown"], undefined, "localStorage['unknown']")
         assert.equal(localStorage["undefined"], "foo", "localStorage['undefined']")
         assert.equal(localStorage["null"], "bar", "localStorage['null']")
         assert.equal(localStorage[undefined], "foo", "localStorage[undefined]")
@@ -30,6 +31,8 @@ describe("getItem", function () {
         assert.equal(localStorage[""], "baz", "localStorage['']")
     }, "array access should be correct");
     it("3", function () {
+        // getItem style access should return null if not found, the same as real localstorage.
+        assert.strictEqual(localStorage.getItem("unknown"), null, "localStorage.getItem('undefined')")
         assert.equal(localStorage.getItem("undefined"), "foo", "localStorage.getItem('undefined')")
         assert.equal(localStorage.getItem("null"), "bar", "localStorage.getItem('null')")
         assert.equal(localStorage.getItem(undefined), "foo", "localStorage.getItem(undefined)")

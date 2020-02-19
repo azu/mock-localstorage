@@ -20,7 +20,7 @@ describe("clear", function () {
         assert.equal(localStorage.length, 2);
         localStorage.clear()
         assert.equal(localStorage.length, 0);
-        assert.equal(localStorage.getItem("name"), null, "localStorage.getItem('name')")
-        assert.equal(localStorage.getItem("escapedkey:name"), null, "localStorage.getItem('escapedkey:name')")
+        assert.strictEqual(localStorage.getItem("name"), null, "localStorage.getItem('name')")
+        assert.strictEqual(localStorage.getItem("escapedkey:name"), null, "localStorage.getItem('escapedkey:name')")
     });
 });
